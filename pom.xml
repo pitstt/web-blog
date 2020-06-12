@@ -84,11 +84,11 @@
                 </executions>
                 <configuration>
                     <repository>registry.heroku.com/${project.artifactId}/web</repository>
-                    <tag>latest</tag>
+                    <tag>${project.version}</tag>
+                    <pullNewerImage>false</pullNewerImage>
                     <buildArgs>
                         <JAR_FILE>${project.build.finalName}.jar</JAR_FILE>
                     </buildArgs>
-                    <pullNewerImage>false</pullNewerImage>
                 </configuration>
             </plugin>
         </plugins>
