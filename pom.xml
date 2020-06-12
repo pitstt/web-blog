@@ -15,6 +15,7 @@
     <description>Demo project for Spring Boot</description>
 
     <properties>
+        <docker.image.prefix>springio</docker.image.prefix>
         <java.version>1.8</java.version>
         <maven.deploy.skip>true</maven.deploy.skip>
     </properties>
@@ -49,11 +50,6 @@
             <artifactId>lombok</artifactId>
             <version>1.18.12</version>
             <optional>true</optional>
-        </dependency>
-        <dependency>
-            <groupId>com.spotify</groupId>
-            <artifactId>docker-maven-plugin</artifactId>
-            <version>1.2.2</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
