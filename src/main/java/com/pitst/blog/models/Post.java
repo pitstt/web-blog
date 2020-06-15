@@ -1,12 +1,14 @@
 package com.pitst.blog.models;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
 @Data
 @Entity
-@Table(name = "Post")
+@NoArgsConstructor
+@Table(name = "post")
 public class Post {
 
     @Id
@@ -18,7 +20,13 @@ public class Post {
     private String anons;
 
     @Column(name = "full_text")
-    private  String fullText;
+    private String fullText;
 
     private int views;
+
+    public Post(String title, String anons, String fullText) {
+        this.title = title;
+        this.anons = anons;
+        this.fullText = fullText;
+    }
 }
